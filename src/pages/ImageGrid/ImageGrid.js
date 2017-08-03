@@ -12,7 +12,6 @@ import {
 import { connect } from 'react-redux';
 import { ImageGridStyle } from './ImageGridStyle';
 import ImageElement from '../../components/ImageElement';
-import SmartImage from '../../components/SmartImage';
 import { fetchImages } from '../../actions';
 
 class ImageGrid extends Component {
@@ -27,7 +26,6 @@ class ImageGrid extends Component {
   }
 
   componentDidMount() {
-    StatusBar.setBarStyle('dark-content');
     this.props.fetchImages(this.state.page, 18);
   }
 
